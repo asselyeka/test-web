@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Assel's web page</title>
+  </head>
+  <body>
+    <header class="alert alert-danger">
+        <h1>Ascii ART Web</h1>
+    </header>
+    
+    <section>
+
+      
+      <form class="form-horizontal" action="/" method="POST">
+        <label>Choose style:</label>
+        <select class="browser-default custom-select" name="fonts" >
+          <option value="standard" selected>standard</option>
+          <option value="shadow">shadow</option>
+          <option value="thinkertoy">thinkertoy</option>
+        </select>
+
+        <br><br>
+
+       
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Type your text:</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" name="body" rows="2" cols="40" placeholder="write text">Hello World!</textarea>
+        </div>
+
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-10">
+            <input class="btn btn-success" type="submit" value="Submit" >
+          </div>
+        </div>
+
+      </form>
+    </section>
+
+    <div class="form-group"> 
+      <label for="exampleFormControlTextarea1">Ascii-art version of your text:</label>
+      <pre><textarea class="form-control" id="exampleFormControlTextarea1" rows="10" cols="40" placeholder="write text">{{printf "%s" .}}</textarea></pre>
+    </div>
+      
+  </body>
+</html>
